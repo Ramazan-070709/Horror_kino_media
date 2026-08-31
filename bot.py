@@ -211,18 +211,6 @@ async def start_handler(message: Message):
         "🎬 Kino botiga xush kelibsiz!\n\n"
         "Kino kodini yuboring:"
     )
-@dp.message(Command("admin"))
-async def admin_command(message: Message, state: FSMContext):
-    await state.clear()
-
-    if message.from_user.id != ADMIN_ID:
-        await message.answer("❌ Siz admin emassiz.")
-        return
-
-    await message.answer(
-        "⚙️ Admin panel\n\n"
-        "Admin panelga xush kelibsiz!"
-           )
 
 # =========================
 # TEKSHIRISH
